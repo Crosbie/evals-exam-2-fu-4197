@@ -62,6 +62,7 @@ public class CamelRouter extends RouteBuilder {
             //
             // UNCOMMENT THIS
             .to("direct:arrivalsImplRemote", "direct:departuresImplRemote");
+            
     
         from("direct:arrivalsImplRemote").description("Arrivals REST service implementation route")
             .streamCaching()
